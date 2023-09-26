@@ -373,8 +373,8 @@ async function run() {
 				total_amount: totalAmount,
 				currency: "BDT",
 				tran_id: tran_id, // use unique tran_id for each api call
-				success_url: `https://ticket-booking-server-mgrakib.vercel.app/payment/success/${tran_id}`,
-				fail_url: `https://ticket-booking-server-mgrakib.vercel.app/payment/failed/${tran_id}`,
+				success_url: `https://e-ticketbooking.onrender.com/payment/success/${tran_id}`,
+				fail_url: `https://e-ticketbooking.onrender.com/payment/failed/${tran_id}`,
 				cancel_url: "http://localhost:3030/cancel",
 				ipn_url: "http://localhost:3030/ipn",
 				shipping_method: "Courier",
@@ -579,7 +579,7 @@ async function run() {
 }
 run().catch(console.dir);
 
-app.get("/", (req, res) => {
+app.get("/health", (req, res) => {
 	res.send("e-Ticket-Booking Server running...");
 });
 
