@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+     <div class='h-[1123.2px] relative'>
+			<div
+				class=''
+				
+			>
+				<div class=' border  mx-auto '>
+					
+					<div class='grid grid-cols-2 gap-5'>
+						
+						<div class='col-span-1 relative'>
+							<div class='absolute left-0 top-0 h-[100px] w-full bg-[#89B837] angle-traingel'></div>
+							<div class='absolute left-0 top-0 h-[110px] w-[95%] bg-[#7BA630] angle-traingel2'></div>
+							<div class='absolute left-0 top-0 h-[120px] w-[90%] bg-[#2A3547] angle-traingel3'></div>
+
+							<div class='absolute left-[48px] top-8  leading-3 '>
+								<p class='text-xl font-bold text-white'>
+									E-Ticket Booking 
+								</p>
+								<p class='text-[13px] tracking-[0.9px] text-gray-300'>
+									Skip the Line, Buy Online.
+								</p>
+							</div>
+							<div class='absolute w-[200px] -right-14 top-5'>
+								<img
+									src="https://i.ibb.co/zVKQG5d/logo.png"
+									alt=''
+									class='transform scale-x-[-1]'
+								/>
+							</div>
+						</div>
+						
+						<div class='col-span-1 text-right mt-8 pr-[48px]'>
+							<div class=' max-w-[165px] ml-auto'>
+								<p class='text-4xl font-bold tracking-[3px] text-[#91BB38]'>
+									INVOICE
+								</p>
+								<div class='mt-1'>
+									<div class='flex items-center justify-between text-[11px] font-bold mt-1 text-gray-800'>
+										<p>Invoice Number:</p>
+										<p>#{{invoiceNumber}}</p>
+									</div>
+									<div class='flex items-center justify-between text-[11px] font-bold mt-1 text-gray-800'>
+										<p>Invoice Date:</p>
+										<p>{{paymentDate}}</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					
+					<div class='px-[48px]'>
+						
+						<div class='mt-10 '>
+							<div class='flex items-start justify-between'>
+								<div>
+									<p class='text-[16px] font-semibold'>
+										Passenger Info:
+									</p>
+									<div class='text-[12px] text-gray-500'>
+										<p>
+											todo
+										</p>
+
+										<p>{{passengerMobileNo}}</p>
+										<p>{{passengerEmail}}</p>
+									</div>
+								</div>
+								<div class='text-right'>
+									<p class='text-[16px] font-semibold'>
+										{{busOperatorName}}
+									</p>
+									<div class='text-[12px] text-gray-500'>
+										<p class="max-w-[200px]">{{ busOperatorAddress}}</p>
+										<p>{{ busOperatorPhoneNumber}}</p>
+										<p>{{ busOperatorEmail}}</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						
+						<div class='mt-10 flex flex-col gap-10 min-h-[580px]  '>
+							
+							<div>
+								<div class='py-2 px-3 bg-[#8AB937] flex items-center text-white'>
+									<div class='w-[30%]'>
+										<p class='font-bold'>From:</p>
+									</div>
+									<div class='flex-1'>
+										<p class='font-bold'>To:</p>
+									</div>
+									<div class='w-[25%]'>
+										<p class='font-bold'>
+											Date of Journey:
+										</p>
+									</div>
+								</div>
+								<div class='py-2 px-3 bg-[#F7F8FA] flex items-center '>
+									<div class='w-[30%]'>
+										<p class='text-[14px] '>
+											{{startingPoint}}
+										</p>
+									</div>
+									<div class='flex-1'>
+										<p class='text-[14px] '>
+										{{endingPoint}}
+										</p>
+									</div>
+									<div class='w-[25%]'>
+										<p class='text-[14px] '>
+											{{journeyDate}}
+										</p>
+									</div>
+								</div>
+							</div>
+
+							
+							<div>
+								<div class='py-2 px-3 bg-[#8AB937] flex items-center text-white'>
+									<div class='w-[30%]'>
+										<p class='font-bold'>
+											Reporting Time:
+										</p>
+									</div>
+									<div class='w-[30%]'>
+										<p class='font-bold'>
+											Departure Time:
+										</p>
+									</div>
+									<div class='flex-1'>
+										<p class='font-bold'>Status:</p>
+									</div>
+									<div class='w-[25%]'>
+										<p class='font-bold'>Ticked ID:</p>
+									</div>
+								</div>
+								<div class='py-2 px-3 bg-[#F7F8FA] flex items-center '>
+									<div class='w-[30%]'>
+										<p class='text-[14px] '>
+											{{dateFormatestartingTime startingTime "h:mm a"}}
+										</p>
+									</div>
+									<div class='w-[30%]'>
+										<p class='text-[14px] '>
+											{{dateFormate startingTime "h::mm a"}}
+										</p>
+									</div>
+									<div class='flex-1'>
+										<p class='text-[14px] '>Booked</p>
+									</div>
+									<div class='w-[25%]'>
+										<p class='text-[14px] '>
+											{{tran_id}}
+										</p>
+									</div>
+								</div>
+							</div>
+
+							
+
+							<div>
+								<div class='py-2 px-3 bg-[#8AB937] flex items-center text-white'>
+									<div class='w-[30%]'>
+										<p class='font-bold'>
+											Passenger Name:
+										</p>
+									</div>
+									<div class='flex-1'>
+										<p class='font-bold'>Seat No:</p>
+									</div>
+									<div class='w-[25%]'>
+										<p class='font-bold'>Gender:</p>
+									</div>
+								</div>
+								<div class='flex flex-col gap-1 mt-1'>
+
+									{{#each passengerInfo as | passenger |}}
+										<div class="py-2 px-3 bg-[#F7F8FA] flex items-center">
+											<div class="w-[30%]">
+												<p class="text-[14px]">
+													{{passenger.seat}}
+												</p>
+											</div>
+											<div class="flex-1">
+												<p class="text-[14px]">
+													{{passenger.passengerName}}
+												</p>
+											</div>
+											<div class="w-[25%]">
+												<p class="text-[14px]">
+													{{passenger.gender}}
+												</p>
+											</div>
+										</div>
+									{{/each}}
+
+									
+								</div>
+							</div>
+
+							
+							<div>
+								<div class='py-2 px-3 bg-[#8AB937] flex items-center text-white'>
+									<div class='w-[30%]'>
+										<p class='font-bold'>Travels:</p>
+									</div>
+									<div class='flex-1'>
+										<p class='font-bold'>Bus Number:</p>
+									</div>
+									<div class='flex-1'>
+										<p class='font-bold'>Bus Type:</p>
+									</div>
+									<div class='w-[25%]'>
+										<p class='font-bold'>
+											Boarding Point:
+										</p>
+									</div>
+								</div>
+								<div class='py-2 px-3 bg-[#F7F8FA] flex items-center '>
+									<div class='w-[30%]'>
+										<p class='text-[14px] '>
+											{{busOperatorName}}
+										</p>
+									</div>
+									<div class='flex-1'>
+										<p class='text-[14px] '>
+											{{busNumber}}
+										</p>
+									</div>
+									<div class='flex-1'>
+										<p class='text-[14px] '>
+											todo
+										</p>
+									</div>
+									<div class='w-[25%]'>
+										<p class='text-[14px] '>---</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						
+
+						<div class='mt-5'>
+							<div class='py-2 px-3 bg-[#F3F3F3] flex'>
+								<div class='flex items-center justify-between  w-[30%] ml-auto '>
+									<p class='text-[16px] font-bold'>
+										Total:
+									</p>
+									<p>{{totalAmount}}</p>
+								</div>
+							</div>
+						</div>
+
+						<div class='mt-14'>
+							<div>
+								<p class='font-bold'>NOTE:</p>
+								<p class='text-[12px] text-gray-500'>
+									This is computer generated receipt and does
+									not require physical signature.
+								</p>
+							</div>
+						</div>
+
+						
+					</div>
+
+					
+					<div class='w-[100px] absolute left-16 bottom-40'>
+						<img src="https://i.ibb.co/r6fh4xj/image.png" alt="">
+					</div>
+
+					
+				</div>
+			</div>
+			<div class=' bg-[#8AB937] rounded-tl-full absolute bottom-0 left-0 w-full '>
+						<div class='w-[98%] bg-[#242437] rounded-tl-full py-[10px] px-[48px] ml-auto'>
+							<div class='flex items-center justify-between text-white text-[12px]'>
+								<div>
+									<p>www.e-ticket.com</p>
+								</div>
+								<div>
+									<p>+880 1811115794</p>
+								</div>
+								<div>
+									<p>info@e-ticket.com</p>
+								</div>
+							</div>
+						</div>
+					</div>
+		</div>
+</body>
+</html>
