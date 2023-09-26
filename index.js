@@ -269,50 +269,7 @@ async function run() {
 					);
 					res.send(operatorDocument);
 				}
-				// if (!operatorDocument) {
-				// 	const document = {
-				// 		busOperatorName: getPendingBus?.busOperatorName,
-				// 		busNumbers: [getPendingBus?.busNumber],
-				// 		businessReg: getPendingBus?.businessReg,
-				// 	};
-				// 	const addBusNumber = await busNumbersCollections.insertOne(
-				// 		document
-				// 	);
-
-				// } else if (operatorDocument) {
-				// 	const isAlreadyIn =
-				// 		operatorDocument.busNumbers.includes(getPendingBus?.busNumber);
-
-				// 	if (isAlreadyIn) {
-				// 		return res.send({
-				// 			messate:'The Bus Number is Already In'
-				// 		})
-				// 	} else {
-				// 		  const result =
-				// 				await busNumbersCollections.updateOne(
-				// 					{ businessReg: getPendingBus.businessReg },
-				// 					{
-				// 						$push: {
-				// 							busNumbers: getPendingBus.busNumber,
-				// 						},
-				// 					}
-				// 			);
-
-				// 		res.send(result);
-				// 	}
-				// }
-			}
-
-			// if (
-			// 	operatorDocument &&
-			// 	operatorDocument.ticketNumber.includes(getPendingBus?.busNumber)
-			// ) {
-			// 	res.send(operatorDocument);
-			// } else {
-			// 	res.send({
-			// 		message: "nai",
-			// 	});
-			// }
+				
 		});
 
 		app.post("/create-user", async (req, res) => {
@@ -622,7 +579,7 @@ async function run() {
 }
 run().catch(console.dir);
 
-app.get("/health", (req, res) => {
+app.get("/", (req, res) => {
 	res.send("e-Ticket-Booking Server running...");
 });
 
